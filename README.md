@@ -10,6 +10,6 @@
     -CSS<br>
  
  
-  <p>Clicando aqui você pode abrir o site e ouvir algumas musicas: <a href="https://maxzampieri.github.io/challenge_one_forca/" target="_blank">MaxPlay</a></p> <br>
+  <p>Clicando aqui você pode abrir o site e ouvir algumas musicas: <a href="https://maxzampieri.github.io/MaxPlayer/" target="_blank">MaxPlay</a></p> <br>
   Se você gostou do projeto deixe uma :star:
 
