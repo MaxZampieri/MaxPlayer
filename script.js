@@ -1,18 +1,18 @@
 let musics = [{
-    title: "Best Of You", artist: "Foo Fighters", src: "css/musicas/Best of You.mp3", img: "css/imagens/william-krause-DqmhZ2-6Nmw-unsplash.jpg"
+    title: "Best Of You", artist: "Foo Fighters", src: "css/musicas/Best of You.mp3", img: "css/imagens/foo-fighters.jpg"
 },
 
 {
-    title: "Dani California", artist: "Red Hot Chili Peppers", src: "css/musicas/Dani California.mp3", img: "css/imagens/austin-neill-hgO1wFPXl3I-unsplash.jpg"
+    title: "Dani California", artist: "Red Hot Chili Peppers", src: "css/musicas/Dani California.mp3", img: "css/imagens/download-rhcp2.jpg"
 },
 {
-    title: "Can't Stop", artist: "Red Hot Chili Peppers", src: "css/musicas/Can't Stop.mp3", img: "css/imagens/robert-linder-01EhXsKVk10-unsplash.jpg"
+    title: "Can't Stop", artist: "Red Hot Chili Peppers", src: "css/musicas/Can't Stop.mp3", img: "css/imagens/download-rhcp.jpg"
 },
 {
-    title: "Enter Sandman", artist: "Metallica", src: "css/musicas/Enter Sandman.mp3", img: "css/imagens/diego-ornelas-tapia-KazZtMYsPGs-unsplash.jpg"
+    title: "Enter Sandman", artist: "Metallica", src: "css/musicas/Enter Sandman.mp3", img: "css/imagens/metallica.jpg"
 },
 {
-    title: "Last Nite", artist: "The Strokes", src: "css/musicas/Last Nite.mp3", img: "css/imagens/filip-andrejevic-QmX5lw8StoQ-unsplash.jpg"
+    title: "Last Nite", artist: "The Strokes", src: "css/musicas/Last Nite.mp3", img: "css/imagens/the-strokes.jpg"
 }
 ]
 
@@ -23,14 +23,18 @@ let image = document.querySelector(".front-img")
 let nameMusic = document.querySelector(".description h2")
 let nameArtist = document.querySelector(".description i")
 
+
 changeMusic(indexMusic)
 
 
 
-// Eventos
+
+// Events
 document.querySelector(".button-play").addEventListener("click", playMusic)
 
 document.querySelector(".button-pause").addEventListener("click", pauseMusic)
+
+
 
 music.addEventListener("timeupdate", updateLine)
 
@@ -42,14 +46,16 @@ document.querySelector(".button-back").addEventListener("click", () => {
     changeMusic(indexMusic)
 } )
 
-document.querySelector(".button-next").addEventListener("click", () => {
+document.querySelector(".button-next").addEventListener("click" , () => {
     
     indexMusic++;
     if (indexMusic > 4){
         indexMusic = 0;
     }
+    
     changeMusic(indexMusic)
 } )
+
 
 // Functions
 function changeMusic(index){
@@ -59,8 +65,9 @@ function changeMusic(index){
         nameArtist.textContent = musics[index].artist
         image.src = musics[index].img
         durationMusic.textContent = secondsToMinutes(Math.floor(music.duration))
-        pauseMusic()
+        
         playMusic()
+        
     })
 }
 
@@ -71,11 +78,13 @@ function playMusic(){
     
 }
 
+
 function pauseMusic(){
     music.pause()
     document.querySelector(".button-pause").style.display = "none"
     document.querySelector(".button-play").style.display = "block"   
 }
+
 
 function updateLine(){
     let line = document.querySelector('progress');
@@ -94,6 +103,8 @@ function secondsToMinutes(seconds){
     return fieldMinutes + ":" + fieldSeconds
 
 }
+
+
 
 
 
