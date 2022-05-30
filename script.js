@@ -16,12 +16,15 @@ let musics = [{
 }
 ]
 
+
 let music = document.querySelector("audio")
 let indexMusic = 0
 let durationMusic = document.querySelector('.end')
 let image = document.querySelector(".front-img")
 let nameMusic = document.querySelector(".description h2")
 let nameArtist = document.querySelector(".description i")
+let pop = document.querySelector(".pop")
+
 
 
 changeMusic(indexMusic)
@@ -33,6 +36,7 @@ changeMusic(indexMusic)
 document.querySelector(".button-play").addEventListener("click", playMusic)
 
 document.querySelector(".button-pause").addEventListener("click", pauseMusic)
+
 
 
 
@@ -66,7 +70,12 @@ function changeMusic(index){
         image.src = musics[index].img
         durationMusic.textContent = secondsToMinutes(Math.floor(music.duration))
         
+        
         playMusic()
+            document.querySelector(".button-pause").style.display = "none"
+            document.querySelector(".button-play").style.display = "block" 
+        pauseMusic()
+        
         
     })
 }

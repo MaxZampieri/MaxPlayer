@@ -4,31 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="css/imagens/android-chrome-192x192.png" type="image/x-icon">
+    <title>MaxPlay</title>
 </head>
 <body>
     <main>
-       <div class="header">
+        
+        <div class="header">
             <img class="logo" src="css/imagens/pngegg (4).png" alt="">
             <p>MaxPlay</p>
         </div>
-        <div class="title">
-            <h1 class="gradient">Seja bem vindo ao MaxPlay</h1>
-            <p>O seu App de musicas Gratis</p>
+        
+        <img class="front-img" src="css/imagens/james-stamler-k3heD_KwH0A-unsplash.jpg" alt="A imagem não foi carregada">
+        <div class="description">
+            <h2>Nome da música</h2>
+            <i>Nome do artista</i>
         </div>
-        <div class="dropdown-menu">
-            Gêneros
-                <ul class="dropdown">
-                  <a href="player.html" target="_blank">
-                      <li>Rock</li>
-                  </a>
-                  <li>Pop</li>
-                  <li>Hits</li>
-                  <li>Nacionais</li>
-                  <li>top 10</li>
-                </ul>
-          </div>
+        <div class="duraction-music">
+            <div class="line">
+                <progress  value="0" Max="1"></progress>
+                <div class="point"></div>
+            </div>
+            <div class="time">
+                <p class="start">0:00</p>
+                <p class="end" value="0">3:41</p>
+            </div>
+        </div>
+        <div class="player">
+            <ion-icon class="button-back" name="play-skip-back-circle-outline"></ion-icon>
+            <ion-icon class="button-play" name="play-circle-outline"></ion-icon>
+            <ion-icon class="button-pause" name="pause-circle-outline"></ion-icon>
+            <ion-icon class="button-next" name="play-skip-forward-circle-outline"></ion-icon>
+        </div>
+        <audio src="css/musicas/Best of You.mp3"></audio>
+        
     </main>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
